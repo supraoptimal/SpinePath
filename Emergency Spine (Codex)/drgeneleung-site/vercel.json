@@ -1,6 +1,0 @@
-{
-  "rewrites": [
-    { "source": "/SpinePath", "destination": "/SpinePath/index.html" },
-    { "source": "/SpinePath/", "destination": "/SpinePath/index.html" }
-  ]
-}
