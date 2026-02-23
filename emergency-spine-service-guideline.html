@@ -120,11 +120,147 @@
     }
 
     .disclaimer {
-      border-left: 5px solid var(--urgent);
-      background: #fff6f6;
-      color: #5d1f1f;
+      border-left: 5px solid #2f5f8a;
+      background: #f3f8ff;
+      color: #183a59;
       font-size: 0.94rem;
       line-height: 1.4;
+    }
+
+    .safe-use-panel {
+      margin-bottom: 12px;
+      border-left: 5px solid var(--teal);
+      background: #f6fbff;
+    }
+
+    .audience-label {
+      display: inline-block;
+      margin: 0 0 8px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #e8f4fb;
+      border: 1px solid #c6dcec;
+      color: #153b5e;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+
+    .safe-use-panel p {
+      margin: 6px 0;
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    .safe-use-panel ul {
+      margin: 8px 0 0;
+      padding-left: 18px;
+      color: #1d3d5e;
+      font-size: 0.86rem;
+      line-height: 1.35;
+    }
+
+    .why-details {
+      margin-top: 8px;
+      border: 1px solid #d6e4f1;
+      background: #fff;
+    }
+
+    .governance-panel {
+      margin-top: 14px;
+      margin-bottom: 0;
+      border: 1px solid #e5ebf3;
+      background: #fcfdff;
+    }
+
+    .governance-panel details {
+      margin: 0;
+      border: 0;
+      background: transparent;
+      padding: 0;
+    }
+
+    .governance-panel summary {
+      cursor: pointer;
+      color: #55697f;
+      font-size: 0.86rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      list-style: none;
+    }
+
+    .governance-panel summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .governance-panel summary::before {
+      content: "View ";
+      color: #7a8da2;
+      font-weight: 600;
+    }
+
+    .governance-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+      margin: 10px 0 8px;
+    }
+
+    .meta-item {
+      display: grid;
+      gap: 2px;
+      border: 1px solid #e7edf5;
+      border-radius: 10px;
+      background: #fff;
+      padding: 7px 10px;
+    }
+
+    .meta-label {
+      color: #5f7389;
+      font-size: 0.74rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .meta-value {
+      color: #3f536a;
+      font-size: 0.86rem;
+      line-height: 1.35;
+    }
+
+    .governance-links {
+      margin: 8px 0 0;
+      font-size: 0.82rem;
+      color: #6a7d92;
+    }
+
+    .safety-note {
+      border: 1px solid #d5e1ef;
+      border-left: 4px solid #3f6ea3;
+      border-radius: 12px;
+      background: #f7fbff;
+      padding: 10px 12px;
+      margin: 10px 0;
+    }
+
+    .safety-note strong {
+      color: #1f4468;
+      font-size: 0.9rem;
+    }
+
+    .safety-note p {
+      margin: 6px 0 0;
+      font-size: 0.88rem;
+      line-height: 1.35;
+      color: #204261;
+    }
+
+    .estimate-note {
+      margin-top: 6px;
+      font-size: 0.82rem;
+      color: #4c5f76;
+      font-style: italic;
     }
 
     .timing-logistics-card {
@@ -508,6 +644,22 @@
       line-height: 1.4;
     }
 
+    .calculator-note {
+      margin: 8px 0 10px;
+      border: 1px solid #d5e1ef;
+      border-left: 4px solid #3c6e9f;
+      border-radius: 10px;
+      background: #f7fbff;
+      padding: 9px 10px;
+    }
+
+    .calculator-note p {
+      margin: 4px 0;
+      font-size: 0.84rem;
+      line-height: 1.32;
+      color: #1f4366;
+    }
+
     .ref-nav {
       position: sticky;
       top: 106px;
@@ -766,10 +918,39 @@
       padding: 12px 14px 18px;
       color: #4e5e75;
       font-size: 0.8rem;
-      text-align: center;
+      text-align: left;
+    }
+
+    .footer-disclaimer {
+      border: 1px solid #d0dcec;
+      border-left: 5px solid #355f89;
+      border-radius: 12px;
+      background: #f5f9ff;
+      padding: 10px 12px;
+      font-size: 0.84rem;
+      line-height: 1.38;
+      color: #1f3f5f;
+    }
+
+    .footer-meta {
+      margin-top: 10px;
+      border: 1px solid #dde6f1;
+      border-radius: 12px;
+      background: #fff;
+      padding: 10px 12px;
+      font-size: 0.82rem;
+      line-height: 1.35;
+    }
+
+    .footer-meta strong {
+      color: #274a6d;
     }
 
     @media (min-width: 760px) {
+      .governance-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
       .pathology-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
@@ -804,15 +985,33 @@
     </header>
 
     <main>
+      <section class="panel-card safe-use-panel" id="safe-use-panel">
+        <span class="audience-label">For healthcare professionals only (orthopaedic/neurosurgical trainees and specialists)</span>
+        <p><strong>Independent educational reference for qualified clinicians.</strong></p>
+        <ul>
+          <li>Not medical advice for the general public.</li>
+          <li>Not a substitute for consultant/senior review, clinical judgment, imaging interpretation, or local policy.</li>
+          <li>Not an official hospital/department guideline unless explicitly stated.</li>
+          <li>Local protocols, formularies, and resource availability vary by institution/jurisdiction.</li>
+          <li>Always verify with current local policy and current literature before applying in practice.</li>
+        </ul>
+        <details class="why-details">
+          <summary>Why this matters</summary>
+          <p>This tool supports structured discussion and escalation by qualified teams; patient-specific decisions remain with the treating clinicians.</p>
+        </details>
+      </section>
+
       <section id="decision-mode">
         <div id="landing-view">
-          <div class="panel-card disclaimer">
-            This tool is for educational purposes only and does not constitute medical advice. Clinical decisions should be made by qualified practitioners based on individual patient assessment.
-          </div>
-
           <div class="landing-header">
             <h2>Acute Pathology Decision Support</h2>
-            <p>Select an acute pathology category to enter a guided pathway.</p>
+            <p>Select an acute pathology category to enter a guided framework.</p>
+          </div>
+
+          <div class="safety-note">
+            <strong>Acute pathway framing</strong>
+            <p>This pathway supports structured assessment and escalation. It does not replace consultant decision-making, multidisciplinary discussion, or local emergency workflows.</p>
+            <p>Timing depends on neurological status/trend, pathology, imaging, patient factors, theatre access, ICU/anesthesia availability, and local system constraints.</p>
           </div>
 
           <div class="pathology-grid" id="pathology-grid"></div>
@@ -838,6 +1037,12 @@
             </div>
           </div>
 
+          <div class="safety-note">
+            <strong>Acute pathway framing</strong>
+            <p>This output is an educational framework and escalation aid. Urgent senior review and local emergency protocol remain essential.</p>
+            <p>Urgency categories are educational heuristics and require senior clinical interpretation.</p>
+          </div>
+
           <div class="panel-card" id="pathway-node"></div>
         </div>
       </section>
@@ -851,16 +1056,19 @@
           <button class="ref-tab" data-target="ref-theatre">Theatre</button>
           <button class="ref-tab" data-target="ref-scoring">Scoring</button>
           <button class="ref-tab" data-target="ref-contacts">Contacts</button>
+          <button class="ref-tab" data-target="ref-about">About &amp; Scope</button>
+          <button class="ref-tab" data-target="ref-changelog">Changelog</button>
           <button class="ref-tab" data-target="ref-references">References</button>
         </nav>
-
-        <div class="panel-card disclaimer">
-          This tool is for educational purposes only and does not constitute medical advice. Clinical decisions should be made by qualified practitioners based on individual patient assessment.
-        </div>
 
         <section class="ref-section panel-card" id="ref-workflow">
           <h3>On-call Workflow</h3>
           <ol id="workflow-steps"></ol>
+          <div class="safety-note">
+            <strong>Acute pathway framing</strong>
+            <p>This pathway supports structured assessment and escalation. It does not replace consultant decision-making, multidisciplinary discussion, or local emergency workflows.</p>
+            <p>Timing depends on neurological status/trend, pathology, imaging, patient factors, theatre access, ICU/anesthesia availability, and local system constraints.</p>
+          </div>
           <h3>Timing of Operation</h3>
           <p>Balance clinical urgency with administrative realities on a case-by-case basis.</p>
           <div class="two-col">
@@ -897,6 +1105,12 @@
 
         <section class="ref-section panel-card" id="ref-consent">
           <h3>Consenting Guide</h3>
+          <div class="safety-note">
+            <strong>Consent framing</strong>
+            <p>Statistics shown are population-level estimates, not predictions for an individual patient.</p>
+            <p>Outcomes vary with pathology, baseline neurology, comorbidities, timing, imaging, and treatment response. Use figures to structure discussion, not to script promises.</p>
+            <p>Final consent discussion should be individualized and documented by the treating clinician/team.</p>
+          </div>
           <details open>
             <summary>Objectives and Benefits</summary>
             <ul id="consent-objectives"></ul>
@@ -905,11 +1119,13 @@
             <summary>Expectations and Recovery Statistics</summary>
             <ul id="consent-expectations"></ul>
             <p class="table-citation">Statistics sources: <a href="#ref-references" data-ref-link="40">40</a>, <a href="#ref-references" data-ref-link="41">41</a>, <a href="#ref-references" data-ref-link="42">42</a>, <a href="#ref-references" data-ref-link="44">44</a>, <a href="#ref-references" data-ref-link="45">45</a>, <a href="#ref-references" data-ref-link="46">46</a></p>
+            <p class="estimate-note">Educational estimate (population-level, non-predictive for individuals).</p>
           </details>
           <details>
             <summary>Functional Walking Prediction</summary>
             <table class="small-table" id="walking-table"></table>
             <p class="table-citation">Statistics sources: <a href="#ref-references" data-ref-link="37">37</a>, <a href="#ref-references" data-ref-link="40">40</a>, <a href="#ref-references" data-ref-link="41">41</a>, <a href="#ref-references" data-ref-link="42">42</a>, <a href="#ref-references" data-ref-link="45">45</a>, <a href="#ref-references" data-ref-link="46">46</a></p>
+            <p class="estimate-note">Educational estimate (population-level, non-predictive for individuals).</p>
           </details>
           <details>
             <summary>Complications to Discuss</summary>
@@ -965,6 +1181,11 @@
 
         <section class="ref-section panel-card" id="ref-theatre">
           <h3>Theatre Preparation</h3>
+          <div class="safety-note">
+            <strong>Local operational information</strong>
+            <p>Institution-specific theatre preparation steps, equipment availability, booking processes, and staff workflows may vary and may change over time.</p>
+            <p>Verify current theatre protocols, escalation pathways, implant/instrument availability, and local responsibilities with your department and operating team before use. Listing here does not imply institutional endorsement unless explicitly stated by your service.</p>
+          </div>
           <p>Search and filter procedure-specific instrument plans.</p>
           <div class="theatre-filter">
             <input type="text" id="theatre-search" placeholder="Search procedure / instrument / pathology" />
@@ -989,6 +1210,10 @@
           </details>
           <details>
             <summary>ESCC Quick Grade Guide</summary>
+            <div class="calculator-note">
+              <p>This grade is a decision-support reference and does not replace specialist imaging review or multidisciplinary judgment.</p>
+              <p>Interpret in context of neurological findings, oncology plan, and local practice.</p>
+            </div>
             <div class="mini-image-block">
               <a href="#" class="mini-image-link" id="escc-image-link" data-caption="ESCC Diagram">
                 <img id="escc-image-thumb" alt="ESCC diagram thumbnail" />
@@ -1002,6 +1227,11 @@
 
         <section class="ref-section panel-card" id="ref-contacts">
           <h3>Useful Contacts</h3>
+          <div class="safety-note">
+            <strong>Local operational information</strong>
+            <p>Institution-specific information; may be outdated.</p>
+            <p>Verify current contact details and escalation pathways locally before use. Listing here does not imply institutional endorsement unless explicitly stated by your service.</p>
+          </div>
           <div id="contacts-gate" class="contacts-gate">
             <p>This section is password-protected.</p>
             <div class="contacts-gate-row">
@@ -1013,15 +1243,61 @@
           <div id="contacts-list" class="hidden"></div>
         </section>
 
+        <section class="ref-section panel-card" id="ref-about">
+          <h3>About &amp; Scope</h3>
+          <ul>
+            <li>Intended audience: orthopaedic/neurosurgical trainees and specialists.</li>
+            <li>Purpose: independent educational reference aid for structured assessment and escalation.</li>
+            <li>Limitations: not a patient-specific recommendation engine and not a substitute for consultant/senior review, imaging interpretation, or multidisciplinary judgment.</li>
+            <li>Local variation: protocols, formularies, resources, and workflow constraints differ by institution/jurisdiction.</li>
+            <li>Governance: content versioning and changelog are maintained to support transparent updates.</li>
+          </ul>
+        </section>
+
+        <section class="ref-section panel-card" id="ref-changelog">
+          <h3>Changelog</h3>
+          <ul>
+            <li><strong>v1.0 (23 February 2026):</strong> Baseline release with updated safe-use framing, governance metadata, consent framing notes, acute pathway caution text, and scoring interpretation warnings.</li>
+          </ul>
+        </section>
+
         <section class="ref-section panel-card" id="ref-references">
           <h3>Key References</h3>
           <ol id="reference-list"></ol>
         </section>
       </section>
+
+      <section class="panel-card governance-panel" id="governance-panel">
+        <details>
+          <summary>Project Governance &amp; Version</summary>
+          <div class="governance-grid">
+            <div class="meta-item"><span class="meta-label">Author</span><span class="meta-value">Dr Gene Leung</span></div>
+            <div class="meta-item"><span class="meta-label">Project Type</span><span class="meta-value">Independent educational reference tool</span></div>
+            <div class="meta-item"><span class="meta-label">Version</span><span class="meta-value">1.0</span></div>
+            <div class="meta-item"><span class="meta-label">Last Updated</span><span class="meta-value">23 February 2026</span></div>
+            <div class="meta-item"><span class="meta-label">References Reviewed</span><span class="meta-value">January 2024</span></div>
+            <div class="meta-item"><span class="meta-label">Scope Note</span><span class="meta-value">General educational reference; local protocols vary by institution and jurisdiction.</span></div>
+          </div>
+          <p class="governance-links"><a href="#ref-about" data-ref-target="ref-about">About &amp; Scope</a> · <a href="#ref-changelog" data-ref-target="ref-changelog">Changelog</a></p>
+        </details>
+      </section>
     </main>
 
     <footer>
-      Offline-capable single-file tool. No external dependencies or API calls.
+      <div class="footer-disclaimer">
+        Educational reference for clinicians only. Not for use by the general public as medical advice.
+        No guarantee of completeness or currency. Verify against local policy/guidelines and current evidence.
+        Clinical decisions remain the responsibility of the treating team.
+      </div>
+      <div class="footer-meta">
+        <strong>Author:</strong> Dr Gene Leung |
+        <strong>Project type:</strong> Independent educational reference tool |
+        <strong>Version:</strong> 1.0 |
+        <strong>Last updated:</strong> 23 February 2026 |
+        <strong>References reviewed:</strong> January 2024<br />
+        <strong>Scope:</strong> General educational reference; local protocols vary by institution/jurisdiction.
+        <a href="#ref-changelog" data-ref-target="ref-changelog">Changelog</a>
+      </div>
     </footer>
   </div>
 
@@ -1114,7 +1390,7 @@
               prompt: "Are there clinical CES features (sacral root dysfunction) such as bladder/bowel dysfunction, reduced saddle sensation, or sexual dysfunction?",
               references: ["[10]", "[11]"],
               options: [
-                { label: "Yes", next: "ces_2" },
+                { label: "Yes", next: "ces_2", urgent: true },
                 { label: "No", next: "ces_not_confirmed" }
               ]
             },
@@ -1135,12 +1411,12 @@
                 {
                   label: "CES-I (Incomplete)",
                   next: "ces_i",
+                  urgent: true,
                   note: "Neurogenic urinary symptoms, partial saddle anaesthesia, reduced anal tone"
                 },
                 {
                   label: "CES-R (Retention)",
                   next: "ces_r",
-                  urgent: true,
                   note: "Painless urinary retention/overflow, complete perianal sensory loss, faecal incontinence"
                 }
               ]
@@ -1149,7 +1425,7 @@
               type: "result",
               urgency: "urgent",
               title: "Recommended Management",
-              recommendation: "Treat as confirmed CES-I and proceed with prompt decompression to prevent progression to CES-R.",
+              recommendation: "Consider managing as confirmed CES-I and prioritize prompt decompression to reduce risk of progression to CES-R.",
               bullets: [
                 "MRI compression + clinical features confirms CES.",
                 "Evidence supports benefit if operated within 48 hours.",
@@ -1161,7 +1437,7 @@
               type: "result",
               urgency: "urgent",
               title: "Recommended Management",
-              recommendation: "Urgent decompression and counselling for CES-R; acknowledge reduced reversibility when complete retention syndrome is established.",
+              recommendation: "Urgent senior review advised; consider decompression and counselling for CES-R while acknowledging reduced reversibility when complete retention syndrome is established.",
               bullets: [
                 "Emergency surgery may provide limited benefit in complete CES-R compared with CES-I.",
                 "Still proceed urgently within service capability and optimize peri-operative logistics.",
@@ -1241,7 +1517,7 @@
               type: "result",
               urgency: "urgent",
               title: "Recommended Management",
-              recommendation: "Proceed with indicated decompression/stabilization within 24 hours once stabilized.",
+              recommendation: "Consider prioritizing decompression/stabilization within 24 hours once hemodynamically stabilized and after senior review.",
               bullets: [
                 "Reduced spinal cord perfusion may worsen secondary injury; avoid prolonged delay after stabilization.",
                 "Coordinate ICU and anesthetic support early."
@@ -1510,7 +1786,7 @@
               prompt: "Is this complicated TB (instability, deformity, or neurological deficit)?",
               references: ["[25]", "[26]", "[28]"],
               options: [
-                { label: "Complicated", next: "inf_tb_2" },
+                { label: "Complicated", next: "inf_tb_2", urgent: true },
                 { label: "Uncomplicated", next: "inf_tb_chemo" }
               ]
             },
@@ -1526,7 +1802,7 @@
             inf_tb_chemo: {
               type: "result",
               title: "Recommended Management",
-              recommendation: "Primary anti-TB chemotherapy is first-line treatment.",
+              recommendation: "Consider primary anti-TB chemotherapy as first-line management in appropriate cases.",
               bullets: [
                 "Even with cold abscess, medical therapy is usually sufficient.",
                 "Monitor closely for progression to complicated disease."
@@ -1548,7 +1824,7 @@
               type: "result",
               urgency: "urgent",
               title: "Recommended Management",
-              recommendation: "Surgery plus anti-TB chemotherapy when mechanical or neurological indications are present.",
+              recommendation: "Consider surgery plus anti-TB chemotherapy when mechanical or neurological indications are present.",
               bullets: [
                 "Drainage indicated for selected large abscess complications (respiratory distress, dysphagia, major psoas deforming abscess).",
                 "Continue long-course chemotherapy as primary disease control."
@@ -1600,9 +1876,9 @@
             }
           ],
           rules: [
-            { min: 0, max: 3, label: "Non-surgical", recommendation: "Score 1-3 favors non-operative management." },
-            { min: 4, max: 4, label: "Equivocal", recommendation: "Score 4 may be managed either surgically or non-surgically." },
-            { min: 5, max: 10, label: "Surgical", recommendation: "Score 5-10 favors surgical management." }
+            { min: 0, max: 3, label: "Lower-score pattern", recommendation: "Score 1-3 can support considering non-operative management in suitable cases." },
+            { min: 4, max: 4, label: "Intermediate pattern", recommendation: "Score 4 is indeterminate; integrate senior judgment, imaging, and local factors." },
+            { min: 5, max: 10, label: "Higher-score pattern", recommendation: "Score 5-10 can support considering operative management when clinically appropriate." }
           ]
         },
 
@@ -1641,9 +1917,9 @@
             }
           ],
           rules: [
-            { min: 0, max: 3, label: "Non-surgical", recommendation: "Score 0-3 favors non-operative management." },
-            { min: 4, max: 4, label: "Equivocal", recommendation: "Score 4 allows surgeon choice." },
-            { min: 5, max: 12, label: "Surgical", recommendation: "Score >4 favors surgical management." }
+            { min: 0, max: 3, label: "Lower-score pattern", recommendation: "Score 0-3 can support considering non-operative management in suitable cases." },
+            { min: 4, max: 4, label: "Intermediate pattern", recommendation: "Score 4 is indeterminate; integrate senior judgment, imaging, and local factors." },
+            { min: 5, max: 12, label: "Higher-score pattern", recommendation: "Score >4 can support considering operative management when clinically appropriate." }
           ]
         },
 
@@ -1708,9 +1984,9 @@
             }
           ],
           rules: [
-            { min: 0, max: 6, label: "Stable", recommendation: "SINS 0-6: stable." },
-            { min: 7, max: 12, label: "Potentially unstable", recommendation: "SINS 7-12: potentially unstable, consider surgical consultation." },
-            { min: 13, max: 18, label: "Unstable", recommendation: "SINS 13-18: unstable, surgical stabilization usually indicated." }
+            { min: 0, max: 6, label: "Stable pattern", recommendation: "SINS 0-6 is generally consistent with stable mechanics." },
+            { min: 7, max: 12, label: "Potentially unstable pattern", recommendation: "SINS 7-12 can be associated with potential instability; consider specialist review." },
+            { min: 13, max: 18, label: "Unstable pattern", recommendation: "SINS 13-18 suggests mechanical instability; prioritize urgent specialist review." }
           ]
         }
       },
@@ -1788,10 +2064,10 @@
           "Explain that final construct/levels may vary with intra-operative findings."
         ],
         expectations: [
-          "Complete tetraplegia: ~13% convert to incomplete by 1 year; only ~2.3% progress to AIS D.",
-          "Complete paraplegia generally has lower recovery; 73% may show no neurological level change at 1 year in cited data.",
-          "Incomplete injuries have better recovery probability; preserved pinprick in AIS B predicts better walking outcomes.",
-          "Most neurological recovery occurs in first 6-9 months and plateaus around 12-18 months."
+          "In reported cohorts, complete tetraplegia may convert to incomplete status (~13% by 1 year); progression to AIS D is uncommon (~2.3%).",
+          "In reported complete paraplegia cohorts, neurological level may remain unchanged at 1 year in many patients (for example ~73% in cited data).",
+          "Incomplete injuries can be associated with better recovery trajectories; preserved pinprick in AIS B can be associated with better walking outcomes.",
+          "Most neurological recovery is often observed in the first 6-9 months, with slower gains toward 12-18 months."
         ],
         complications: [
           "Haemorrhage/transfusion risk can be substantial in malignancy, infection, and inflammatory states.",
@@ -2092,9 +2368,15 @@
 
       els.refTabs.forEach((tab) => {
         tab.addEventListener("click", () => {
-          els.refTabs.forEach((x) => x.classList.remove("active"));
-          tab.classList.add("active");
-          document.getElementById(tab.dataset.target).scrollIntoView({ behavior: "smooth", block: "start" });
+          activateRefTab(tab.dataset.target);
+        });
+      });
+
+      document.querySelectorAll("[data-ref-target]").forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          const targetId = link.getAttribute("data-ref-target");
+          activateRefTab(targetId);
         });
       });
 
@@ -2153,17 +2435,21 @@
       els.referenceMode.classList.toggle("hidden", mode !== "reference");
     }
 
+    function activateRefTab(targetId) {
+      const targetEl = document.getElementById(targetId);
+      if (!targetEl) return;
+      setMode("reference");
+      els.refTabs.forEach((x) => x.classList.toggle("active", x.dataset.target === targetId));
+      targetEl.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
     function extractRefId(refLabel) {
       const m = String(refLabel || "").match(/(\d+)/);
       return m ? Number(m[1]) : null;
     }
 
     function jumpToReference(refId) {
-      setMode("reference");
-      const refSection = document.getElementById("ref-references");
-      if (refSection) {
-        refSection.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
+      activateRefTab("ref-references");
       if (!Number.isFinite(refId) || refId <= 0) return;
       window.setTimeout(() => {
         const target = document.getElementById(`ref-item-${refId}`);
@@ -2268,11 +2554,15 @@
 
     function renderResultNode(node) {
       const severityClass = node.urgency === "urgent" ? "urgent" : node.urgency === "warning" ? "warning" : "";
+      const rawTitle = node.title || "Framework Considerations";
+      const displayTitle = /(Recommended Management|NOMS Decision)/i.test(rawTitle) ? "Framework Considerations" : rawTitle;
+      const recommendationPrefix = /NOMS Decision/i.test(rawTitle) ? "Typical framework consideration: " : "";
+      const softenedRecommendation = softenGuidanceText(node.recommendation);
       const box = document.createElement("div");
       box.className = `result-box ${severityClass}`.trim();
       box.innerHTML = `
-        <h3 class="result-heading">${escapeHtml(node.title || "Recommendation")}</h3>
-        <p class="result-reco">${escapeHtml(node.recommendation)}</p>
+        <h3 class="result-heading">${escapeHtml(displayTitle)}</h3>
+        <p class="result-reco">${escapeHtml(recommendationPrefix + softenedRecommendation)}</p>
       `;
 
       if (Array.isArray(node.bullets) && node.bullets.length) {
@@ -2285,6 +2575,11 @@
         });
         box.appendChild(ul);
       }
+
+      const urgencyNote = document.createElement("p");
+      urgencyNote.className = "score-help";
+      urgencyNote.textContent = "Urgency categories are educational heuristics and require senior clinical interpretation.";
+      box.appendChild(urgencyNote);
 
       const root = document.createElement("div");
       root.innerHTML = `<h3 class="node-title">Endpoint</h3>`;
@@ -2322,7 +2617,9 @@
       const resultWrap = document.createElement("div");
       const timingWrap = document.createElement("div");
       timingWrap.className = "timing-box";
+      const scoreWarning = buildCalculatorSafetyNote();
 
+      root.appendChild(scoreWarning);
       root.appendChild(calcWrap);
       root.appendChild(resultWrap);
       root.appendChild(timingWrap);
@@ -2335,13 +2632,13 @@
         const b = document.createElement("div");
         b.className = "result-box";
         if (!complete) {
-          b.innerHTML = `<h3 class="result-heading">Management Recommendation</h3><p class="result-reco">Complete all scoring fields to generate recommendation.</p>`;
+          b.innerHTML = `<h3 class="result-heading">Score Summary</h3><p class="result-reco">Complete all scoring fields to view score summary and interpretation aid.</p>`;
           resultWrap.appendChild(b);
-          timingWrap.innerHTML = `<strong>Timing Guidance</strong><p>Score first, then apply stabilization/timing recommendation.</p>`;
+          timingWrap.innerHTML = `<strong>Timing Framework</strong><p>Score first, then interpret with senior review, imaging findings, and local emergency workflow.</p>`;
           return;
         }
 
-        b.innerHTML = `<h3 class="result-heading">Management Recommendation</h3><p class="result-reco"><strong>${escapeHtml(rule.label)}:</strong> ${escapeHtml(rule.recommendation)}</p>`;
+        b.innerHTML = `<h3 class="result-heading">Score Summary</h3><p class="result-reco"><strong>Interpretation aid (${escapeHtml(rule.label)}):</strong> ${escapeHtml(rule.recommendation)}</p>`;
         resultWrap.appendChild(b);
 
         renderTraumaTimingBox(timingWrap, instanceId, total);
@@ -2349,7 +2646,7 @@
 
       const endpointNote = document.createElement("p");
       endpointNote.className = "score-help";
-      endpointNote.textContent = "This score output is the endpoint for the trauma pathway. Use Back to change inputs or Start Over to choose another pathology.";
+      endpointNote.textContent = "This score output is an educational interpretation aid for the trauma pathway. Use Back to change inputs or Start Over to choose another pathology.";
       root.appendChild(endpointNote);
       root.appendChild(renderRefChips(node.references || []));
 
@@ -2375,7 +2672,7 @@
 
     function renderTraumaTimingBox(container, instanceId, total) {
       const status = state.traumaHemodynamics[instanceId] || "stabilized";
-      container.innerHTML = "<strong>Timing Guidance (STASCIS / AO Spine)</strong>";
+      container.innerHTML = "<strong>Timing Framework (STASCIS / AO Spine reference)</strong>";
 
       const field = document.createElement("div");
       field.className = "field";
@@ -2406,14 +2703,14 @@
 
       if (total >= 5) {
         if (currentStatus === "stabilized") {
-          p.textContent = "Operative indication present. Proceed to decompression/stabilization within 24 hours when feasible.";
+          p.textContent = "Higher-score pattern. Consider prioritizing decompression/stabilization once hemodynamically stabilized and after urgent senior review.";
         } else {
-          p.textContent = "Operative indication present, but patient is unstable. Prioritize hemodynamic optimization, then proceed urgently.";
+          p.textContent = "Higher-score pattern with current instability. Prioritize hemodynamic optimization, urgent senior escalation, and proceed per local emergency protocol.";
         }
       } else if (total === 4) {
-        p.textContent = "Borderline score (4). Either approach may be used; if surgery is chosen, target early decompression once stabilized.";
+        p.textContent = "Intermediate-score pattern. Consider operative vs non-operative options using senior judgment, imaging, and local resource constraints.";
       } else {
-        p.textContent = "Non-operative pathway favored by score. Continue immobilization/monitoring and reassess if neurological status changes.";
+        p.textContent = "Lower-score pattern may support non-operative management; continue monitoring and escalate promptly if neurological status changes.";
       }
 
       container.appendChild(p);
@@ -2480,7 +2777,7 @@
       const totalBox = document.createElement("div");
       totalBox.className = "score-total";
       const totalLabel = document.createElement("span");
-      totalLabel.textContent = "Total";
+      totalLabel.textContent = "Score";
       const totalValue = document.createElement("span");
       totalValue.textContent = "--";
       totalBox.appendChild(totalLabel);
@@ -2496,7 +2793,7 @@
       function emit() {
         const { complete, total, rule } = computeCalculator(calc, current);
         totalValue.textContent = complete ? String(total) : "--";
-        msg.textContent = complete ? `${rule.label}: ${rule.recommendation}` : "Complete all required fields.";
+        msg.textContent = complete ? `Interpretation aid (${rule.label}): ${rule.recommendation}` : "Complete all required fields.";
         if (onChange) onChange({ complete, total, rule });
       }
 
@@ -2534,6 +2831,7 @@
     function renderCalculatorInReference(calcKey, mountEl, stateKey) {
       const wrap = document.createElement("div");
       mountEl.innerHTML = "";
+      mountEl.appendChild(buildCalculatorSafetyNote());
       mountEl.appendChild(wrap);
       renderCalculator(calcKey, wrap, stateKey, null);
     }
@@ -2573,10 +2871,10 @@
       appendList(els.consentComplications, CLINICAL_DATA.consenting.complications);
       appendList(els.consentAlternatives, CLINICAL_DATA.consenting.alternatives);
 
-      els.asiaGradeTable.innerHTML = "<tr><th>AIS</th><th>Definition</th><th>SCI lesion</th></tr>" +
+      els.asiaGradeTable.innerHTML = "<tr><th>ASIA grade</th><th>Definition</th><th>SCI lesion</th></tr>" +
         CLINICAL_DATA.asia.grades.map((r) => `<tr><td>${escapeHtml(r[0])}</td><td>${escapeHtml(r[1])}</td><td>${escapeHtml(r[2])}</td></tr>`).join("");
 
-      els.walkingTable.innerHTML = "<tr><th>AIS/Feature at admission</th><th>Community walking at 1 year (reported)</th></tr>" +
+      els.walkingTable.innerHTML = "<tr><th>ASIA/feature at admission</th><th>Reported community ambulation at 1 year (population-level estimate)</th></tr>" +
         CLINICAL_DATA.asia.walking.map((r) => `<tr><td>${escapeHtml(r[0])}</td><td>${escapeHtml(r[1])}</td></tr>`).join("");
 
       els.esccTable.innerHTML = "<tr><th>ESCC Grade</th><th>Description</th></tr>" +
@@ -2635,6 +2933,10 @@
 
     function renderContactsList() {
       els.contactsList.innerHTML = "";
+      const note = document.createElement("p");
+      note.className = "contacts-status";
+      note.textContent = "Local operational information (institution-specific; may be outdated). Verify current contact details and escalation pathways locally before use.";
+      els.contactsList.appendChild(note);
       CLINICAL_DATA.contacts.forEach((group) => {
         const card = document.createElement("div");
         card.className = "contact-card";
@@ -2751,6 +3053,28 @@
         li.textContent = item;
         el.appendChild(li);
       });
+    }
+
+    function buildCalculatorSafetyNote() {
+      const note = document.createElement("div");
+      note.className = "calculator-note";
+      note.innerHTML = `
+        <p>This score is a decision-support reference and does not replace specialist assessment, imaging review, or multidisciplinary judgment.</p>
+        <p>Scores may not capture all clinical factors and should not be used in isolation.</p>
+        <p>Interpret in context of the full clinical picture and local practice.</p>
+      `;
+      return note;
+    }
+
+    function softenGuidanceText(text) {
+      if (!text) return "";
+      return String(text)
+        .replace(/^Treat as/i, "Consider managing as")
+        .replace(/^Proceed with/i, "Consider")
+        .replace(/^Proceed to/i, "Consider")
+        .replace(/^Urgent decompression/i, "Urgent senior review advised; consider decompression")
+        .replace(/^Surgery plus/i, "Consider surgery plus")
+        .replace(/^Primary anti-TB chemotherapy is first-line treatment\.?$/i, "Consider primary anti-TB chemotherapy as first-line treatment in appropriate cases.");
     }
 
     function formatPhone(phone) {
